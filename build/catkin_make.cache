@@ -1,0 +1,2 @@
+first_pkg:py_pkg
+-DCATKIN_DEVEL_PREFIX=/home/pi/test_ws/devel -DCMAKE_INSTALL_PREFIX=/home/pi/test_ws/install -G Unix Makefiles

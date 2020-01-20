@@ -1,0 +1,8 @@
+prefix=/home/pi/test_ws/devel
+
+Name: first_pkg
+Description: Description of first_pkg
+Version: 0.0.0
+Cflags: -I/home/pi/test_ws/devel/include -I/home/pi/test_ws/src/first_pkg/include
+Libs: -L/home/pi/test_ws/devel/lib 
+Requires: 

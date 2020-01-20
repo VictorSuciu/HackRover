@@ -1,0 +1,8 @@
+prefix=/home/pi/test_ws/install
+
+Name: py_pkg
+Description: Description of py_pkg
+Version: 0.0.0
+Cflags: -I/home/pi/test_ws/install/include
+Libs: -L/home/pi/test_ws/install/lib 
+Requires: message_runtime
