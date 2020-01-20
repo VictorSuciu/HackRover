@@ -8,7 +8,7 @@ from py_pkg.msg import InputStates
 rospy.init_node('publisher_node')
 
 # Create publisher
-publisher = rospy.Publisher("usr_input", InputStates)
+publisher = rospy.Publisher("usr_input", InputStates, queue_size=10)
 
 value_regex = re.compile('(?<=ue ).+')
 

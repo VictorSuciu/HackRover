@@ -83,7 +83,7 @@ leftDuty = 0
 rightDuty = 0
 
  
-update_main_treads(left_speed, right_speed):
+def update_main_treads(left_speed, right_speed):
     if abs(left_speed) < 40:
         leftForward.stop()
         leftBackward.stop()

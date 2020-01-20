@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="py_pkg" name="usr_input" type="usr_input.py" />
+	<node pkg="py_pkg" name="control_output" type="control_output.py" />
+</launch>
