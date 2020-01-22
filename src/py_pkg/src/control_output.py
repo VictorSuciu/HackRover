@@ -28,11 +28,12 @@ from py_pkg import control_functions
 from py_pkg.msg import InputStates
 
 def callback(data):
-    print(data)
+    control_functions.update_rover_state(data.data)
     
 def listener():
     rospy.init_node('control_output', anonymous=True)
     rospy.Subscriber('usr_input', InputStates, callback)
+    
     rospy.spin()
     
 if __name__ == '__main__':
