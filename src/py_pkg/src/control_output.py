@@ -28,7 +28,7 @@ from py_pkg import control_functions
 from py_pkg.msg import InputStates
 
 def callback(data):
-    control_functions.update_rover_state(data.data)
+    rospy.loginfo(control_functions.update_rover_state(data.data))
     
 def listener():
     rospy.init_node('control_output', anonymous=True)

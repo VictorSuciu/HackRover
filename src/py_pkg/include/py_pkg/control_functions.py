@@ -85,7 +85,7 @@ rightDuty = 0
  
 def update_main_treads(left_speed, right_speed):
     print(left_speed, right_speed)
-    if abs(left_speed) < 40:
+    if abs(left_speed) < 15:
         leftForward.stop()
         leftBackward.stop()
     elif left_speed > 0:
@@ -95,20 +95,20 @@ def update_main_treads(left_speed, right_speed):
         leftForward.stop()
         leftBackward.start(-left_speed)
         
-    if abs(right_speed) < 40:
+    if abs(right_speed) < 15:
         rightForward.stop()
         rightBackward.stop()
     elif right_speed > 0:
         rightBackward.stop()
         rightForward.start(right_speed)
     else:
-        leftForward.stop()
-        leftBackward.start(-right_speed)
+        rightForward.stop()
+        rightBackward.start(-right_speed)
     return [left_speed, right_speed]   
         
         
 def update_rover_state(input_list):
     
-    update_main_treads((input_list[12] / 32767) * 100, (-input_list[15] / 32767) * 100)
+    update_main_treads((-input_list[12] / 32767) * 100, (-input_list[15] / 32767) * 100)
 
 
